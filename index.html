@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekt 2 RWD</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/07289e1d7a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script>
+        function menuOnClick() {
+            document.getElementById("menu-bar").classList.toggle("change");
+            document.getElementById("navi").classList.toggle("change");
+            document.getElementById("menu-bg").classList.toggle("change-bg");
+            document.getElementById("change-hero-txt").classList.toggle("change-hero-txt");
+        }
+
+        // disable menu and fix hero-txt position if viewport is at lest 768px
+        // need extra function for toggle off classList
+
+        function disableMenu() {
+            document.getElementById("menu-bar").classList.remove("change");
+            document.getElementById("navi").classList.remove("change");
+            document.getElementById("menu-bg").classList.remove("change-bg");
+            document.getElementById("change-hero-txt").classList.remove("change-hero-txt");
+        }
+
+        // // Create a condition that targets viewports at least 768px wide
+        const mediaQuery = window.matchMedia('(min-width: 768px)')
+
+        function handleTabletChange(e) {
+            // Check if the media query is true
+            if (e.matches) {
+                // Then log the following message to the console
+                disableMenu()
+            }
+        }
+
+        // Register event listener
+        mediaQuery.addListener(handleTabletChange)
+
+        // Initial check
+        handleTabletChange(mediaQuery)
+    </script>
+</head>
+
+<body>
+    <div class="wide-nav">
+        <nav class="nav-bar">
+            <!-- <button class="burger-icon"><i class="fa-solid fa-bars"></i></button> -->
+            <div class="nav-item"><a href="#">home</a>
+                <a href="#aboutusid">o nas</a>
+                <a href="#productsid">usługi</a>
+                <a href="#contactid">kontakt</a>
+            </div>
+        </nav>
+    </div>
+    <div id="menu">
+        <div id="menu-bar" onclick="menuOnClick()">
+            <div id="bar1" class="bar"></div>
+            <div id="bar2" class="bar"></div>
+            <div id="bar3" class="bar"></div>
+        </div>
+        <nav class="navi" id="navi" onclick="menuOnClick()">
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#aboutusid">o nas</a></li>
+                <li><a href="#productsid">usługi</a></li>
+                <li><a href="#contactid">kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="menu-bg" id="menu-bg" onclick="menuOnClick()"></div>
+
+
+    <header class="header wrapper" id="change-hero-txt">
+        <div class="hero-bg"></div>
+        <div class="hero-txt">
+            <h1>support<span>IT</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+    </header>
+    <main></main>
+    <section class="about-us wrapper" id="aboutusid">
+        <h2 class="section-title">O nas</h2>
+        <p class="aboutus-info">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit officiis ad
+            voluptas, iste impedit autem quasi nihil necessitatibus eius sit perferendis ratione in quae obcaecati
+            quisquam nesciunt ipsum quaerat velit?</p>
+        <p class="aboutus-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, beatae! Sed ipsam
+            voluptatem voluptatum quae cumque deserunt placeat inventore aliquam suscipit numquam necessitatibus
+            dolorum, possimus, quaerat enim provident nulla facilis?</p>
+    </section>
+    <section class="about-us wrapper" id="productsid">
+        <h2 class="section-title">Usługi</h2>
+        <div class="product-box">
+            <div class="products first-product">
+                <div class="hero-bg"></div>
+                <div class="hero-txt">
+                    <h3>Oprogramowanie do firmy</h3>
+                </div>
+            </div>
+            <div class="products second-product">
+                <div class="hero-bg"></div>
+                <div class="hero-txt">
+                    <h3>Obsługa informatyczna</h3>
+                </div>
+            </div>
+            <div class="products third-product">
+                <div class="hero-bg"></div>
+                <div class="hero-txt">
+                    <h3>Help desk</h3>
+                </div>
+            </div>
+            <div class="products fourth-product">
+                <div class="hero-bg"></div>
+                <div class="hero-txt">
+                    <h3>Firmowe strony www</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact wrapper" id="contactid">
+        <h2 class="section-title">kontakt</h2>
+        <p>Skontaktuj się telefonicznie</p>
+        <p>
+            <span class="icon-box">
+                <a href="tel:+48123456789"><i class="fa-solid fa-phone"></i></a> +48
+                123
+                456 789,
+            </span>
+        </p>
+        <p>
+            <span class="icon-box2">
+
+                lub napisz <a href="mailto:adres@e.mail?subject=Wiadomość%20z%20Support%20IT">
+                    <i class="fa-solid fa-envelope-open-text"></i></a>
+            </span>
+        </p>
+        <h3>Adres:</h3>
+        <p>ul. Sezamkowa 2</p>
+        <p>15-521 Zaścianki</p>
+    </section>
+    <footer>
+        <p>&copy; 2023 Grzegorz Cyuńczyk <span class="icon-box">
+                <a href="https://github.com/cyunczykg"><i class="fa-brands fa-github"></i></a>
+                <a href="https://pl.linkedin.com/in/grzegorz-cyu%C5%84czyk-381a6718a"><i
+                        class="fa-brands fa-linkedin"></i></a>
+            </span></p>
+    </footer>
+</body>
+
+</html>
