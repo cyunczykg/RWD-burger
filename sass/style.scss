@@ -1,7 +1,5 @@
-:root {
-	--main-color: #09f;
-	--semitransparent-background: rgba(0, 0, 0, 0.7);
-}
+$main-color: #09f;
+$semitransparent-background: rgba(0, 0, 0, 0.7);
 
 * {
 	box-sizing: border-box;
@@ -31,7 +29,7 @@ section {
 	position: absolute;
 	height: 100%;
 	width: 100%;
-	background-color: var(--semitransparent-background);
+	background-color: $semitransparent-background;
 }
 
 .change-hero-txt {
@@ -88,7 +86,7 @@ section {
 .bar {
 	height: 5px;
 	width: 100%;
-	background-color: var(--main-color);
+	background-color: $main-color;
 	display: block;
 	border-radius: 5px;
 	transition: 0.3s ease;
@@ -142,7 +140,7 @@ section {
 	width: 0;
 	height: 0;
 	margin: 30px 0 0px 20px;
-	background: radial-gradient(circle, var(--main-color), var(--main-color));
+	background: radial-gradient(circle, $main-color, $main-color);
 	border-radius: 50%;
 	transition: 0.3s ease;
 }
@@ -183,7 +181,7 @@ section {
 	}
 	span {
 		text-transform: uppercase;
-		color: var(--main-color);
+		color: $main-color;
 	}
 }
 
@@ -281,7 +279,7 @@ main {
 			transition: color 0.3s;
 		}
 		a:hover {
-			color: var(--main-color);
+			color: $main-color;
 			cursor: pointer;
 		}
 	}
@@ -324,7 +322,7 @@ main {
 }
 
 a {
-	color: var(--main-color);
+	color: $main-color;
 }
 
 /* footer */
