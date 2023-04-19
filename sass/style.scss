@@ -1,5 +1,5 @@
 $main-color: #09f;
-$semitransparent-background: rgba(0, 0, 0, 0.7);
+$semitransparent-background: rgba(0, 0, 9, 0.6);
 
 * {
 	box-sizing: border-box;
@@ -25,6 +25,7 @@ section {
 	width: 100%;
 }
 
+// do zastąpienia z użyciem ::after content ""
 .hero-bg {
 	position: absolute;
 	height: 100%;
@@ -183,6 +184,15 @@ section {
 		text-transform: uppercase;
 		color: $main-color;
 	}
+	&:before {
+		content: '';
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		background-color: $semitransparent-background;
+	}
 }
 
 /* main */
@@ -212,7 +222,27 @@ main {
 	h3 {
 		text-transform: uppercase;
 	}
+	&:before {
+		content: '';
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		background-color: $semitransparent-background;
+	}
 }
+
+// przeniesione do .products &:before
+// .products::before {
+// 	content: '';
+// 	position: absolute;
+// 	height: 100%;
+// 	width: 100%;
+// 	top: 0;
+// 	left: 0;
+// 	background-color: $semitransparent-background;
+// }
 
 .product-box {
 	margin: 0px 20px;

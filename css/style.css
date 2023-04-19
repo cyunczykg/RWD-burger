@@ -26,7 +26,7 @@ section {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 9, 0.6);
 }
 
 .change-hero-txt .hero-txt {
@@ -178,6 +178,16 @@ section {
   color: #09f;
 }
 
+.header::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 9, 0.6);
+}
+
 /* main */
 main {
   margin: 20px 0;
@@ -205,6 +215,16 @@ main {
 }
 .products h3 {
   text-transform: uppercase;
+}
+
+.products::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 9, 0.6);
 }
 
 .product-box {
